@@ -1,0 +1,19 @@
+{
+  "name": "neotenet",
+  "version": "2.0.0",
+  "description": "NeoTenet — lightweight multi-protocol proxy & web panel for Node.js servers",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node index.js"
+  },
+  "dependencies": {
+    "axios": "^1.7.7",
+    "express": "^4.21.0"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "author": "NeoTenet",
+  "license": "MIT"
+}

@@ -1,0 +1,7 @@
+node_modules/
+.neotenet-data/
+*.log
+.env
+.env.*
+.DS_Store
+Thumbs.db

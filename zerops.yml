@@ -1,14 +1,14 @@
-zerops:
-  - setup: nodejs
-    build:
-      base: nodejs@20
-      buildCommands:
-        - npm install
-      deployFiles:
-        - .
-    run:
-      base: nodejs@20
-      ports:
-        - port: 3000
-          httpSupport: true
-      start: npm start
+build:
+  base: ubuntu/nodejs@20
+  buildCommands:
+    - npm install
+  deployFiles: .
+
+run:
+  base: ubuntu/nodejs@20
+  prepareCommands:
+    - sudo apt-get update && sudo apt-get install -y openssl ca-certificates curl
+  ports:
+    - port: 2705
+      httpSupport: true
+  start: npm start

@@ -1,12 +1,14 @@
 zerops:
-  - setup: api
+  - setup: nodejs
     build:
       base: nodejs@20
       buildCommands:
-        - npm i
-        - npm run build
-      deployFiles: ./dist
-      cache: node_modules
+        - npm install
+      deployFiles:
+        - .
     run:
       base: nodejs@20
+      ports:
+        - port: 3000
+          httpSupport: true
       start: npm start

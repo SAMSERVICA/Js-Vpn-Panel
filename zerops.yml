@@ -1,14 +1,12 @@
-zerops:
-  - setup: nodejs
-    build:
-      base: nodejs@20
-      buildCommands:
+build:
+    base: alpine/nodejs@20
+    buildCommands:
         - npm install
-      deployFiles:
-        - .
-    run:
-      base: nodejs@20
-      ports:
+    deployFiles: .
+run:
+    os: alpine
+    base: alpine/nodejs@20
+    start: npm start
+    ports:
         - port: 3000
           httpSupport: true
-      start: npm start

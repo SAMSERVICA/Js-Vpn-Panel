@@ -1,14 +1,14 @@
 zerops:
   - setup: nodejs
     build:
-      base: alpine/nodejs@20
+      base: nodejs@20
       buildCommands:
         - npm install
       deployFiles:
         - .
     run:
-      base: alpine/nodejs@20
+      base: nodejs@20
       ports:
-        - port: 3000   # اگه پنل روی پورت دیگه‌ای مثل 80 یا 8080 اجرا میشه تغییرش بده
+        - port: 3000
           httpSupport: true
       start: npm start

@@ -8,5 +8,5 @@ zerops:
       deployFiles: ./dist
       cache: node_modules
     run:
-      base: nodejs@20
+      base: nodejs@24
       start: npm start
